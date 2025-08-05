@@ -1,7 +1,7 @@
 .hero {
   background: linear-gradient(135deg, #003B63, #0078D7);
   color: white;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
 }
@@ -12,7 +12,7 @@
   padding: 3rem 1rem;
   display: flex;
   align-items: center;
-  gap: 20rem;
+  gap: 5rem; /* reduced from 20rem */
   flex-wrap: wrap;
 }
 
@@ -31,8 +31,7 @@
 }
 
 .hero-content {
-  flex: 4;
-  
+  flex: 2;
 }
 
 .hero-content h1 {
@@ -61,10 +60,19 @@
   .hero-container {
     flex-direction: column;
     text-align: center;
+    gap: 2rem; /* smaller gap on mobile */
   }
 
   .hero-img img {
     width: 200px;
     height: 200px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 }
