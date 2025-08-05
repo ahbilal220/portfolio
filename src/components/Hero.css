@@ -1,7 +1,7 @@
 .hero {
   background: linear-gradient(135deg, #003B63, #0078D7);
   color: white;
-  height: 60vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
 }
