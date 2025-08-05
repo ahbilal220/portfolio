@@ -8,7 +8,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  border-radius: 5px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .logo {
@@ -35,7 +36,29 @@
 }
 
 /* 📱 Tablet & Mobile */
+/* 📱 Tablet & Mobile */
 @media (max-width: 768px) {
+  .nav-bar {
+    justify-content: center; /* center the logo */
+    position: relative;
+  }
+
+  .logo {
+    text-align: center;
+    flex: 1; /* takes available space */
+  }
+
+  /* Keep hamburger icon at the right */
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .links {
     display: none; /* hide by default on mobile */
     flex-direction: column;
@@ -52,14 +75,8 @@
   .links.show {
     display: flex; /* show when menu is toggled */
   }
-
-  /* Hamburger icon */
-  .menu-toggle {
-    display: block;
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
 }
+
 
 /* 💻 Desktop */
 @media (min-width: 769px) {
