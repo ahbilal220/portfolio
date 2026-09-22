@@ -1,12 +1,41 @@
-# React + Vite
+# Ahmad Bilal — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive light-theme portfolio built with React and Vite. Includes six public projects, category filters, professional experience, skills, education, resume download, and direct contact links.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Use Node.js 22.12+ and pnpm 11.
 
-## Expanding the ESLint configuration
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+pnpm lint
+pnpm build
+pnpm preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Deploy the generated `dist/` directory. For the existing Vercel project, use the Vite preset, `pnpm build` as the build command, and `dist` as the output directory.
+
+## Content maintenance
+
+- `src/App.jsx`: project data, skills, experience, education, and contact details.
+- `src/App.css` and `src/index.css`: layout and light-theme styles.
+- `public/Ahmad-Bilal-Resume.pdf`: downloadable original resume.
+- `src/assets/fonts`: locally hosted DM Sans and Manrope with OFL licenses.
+
+The contact action opens the visitor's email application. Copy email uses the Clipboard API with a visible fallback message. No email service credentials or form backend are required.
+
+## Sources and editorial choices
+
+Reviewed the supplied Ahmad Bilal resume and all ten public repositories returned by the GitHub API on September 22, 2026. The portfolio features Smart_Tripster_Backend, munch-backend, User_Chat_App, Care-Home-Marketplace-BE and its Android companion, Student-Management-System, and Used_Car_Price_Pridictor. FastAPI-Postman-Demo and neetcode-submissions are secondary links; the profile and portfolio repositories are not presented as separate product projects.
+
+Career dates, education, and CodeBryx impact metrics follow the supplied resume. Public repository source and READMEs were used for project descriptions. Care Home Marketplace is explicitly labeled a prototype because the backend uses in-memory storage. Munch is described by its implemented weighted recommendation logic rather than its README's scikit-learn claim. Project graphics are illustrative, not product screenshots.
+
+## Validation
+
+- Production build and ESLint.
+- Desktop and mobile visual review.
+- Project filters: all (6), backend (4), AI & ML (2).
+- Mobile navigation and resume PDF response.
+- No horizontal overflow at 320, 390, 768, 1024, and 1440 pixels.
+- No runtime errors in the browser smoke checks.
